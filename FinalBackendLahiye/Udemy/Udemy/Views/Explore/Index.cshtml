@@ -1,0 +1,96 @@
+﻿@model ExploreViewModel
+    <div class="title">
+    @if (Model.Category!=null)
+    {
+        <h1>@(Model.Category.Name) Courses</h1>
+    }
+    else
+    {
+        <h1>@(Model.SubCategory.Name) Courses</h1>
+    }
+
+    
+    <div class="learners">
+            <i class="fa-solid fa-user"></i>
+        <p>@Model.AllCourses.Sum(x=>x.AppUserCourses.Count()) learners</p>
+        
+        </div>
+        <h2>Courses to get you started</h2>
+        <h3>Most Popular</h3>
+    </div>
+    <div class="card-container">
+        @foreach (var crs in Model.Courses1)
+    {
+        @Html.Partial("_CourseCardPartialView",crs)
+    }
+
+    </div>
+    <div class="card-container second">
+        @foreach (var crs in Model.Courses2)
+    {
+        @Html.Partial("_CourseCardPartialView",crs)
+    }
+    </div>
+    <div class="all-courses">
+        <h2>All @(Model.Category!=null?Model.Category.Name:Model.SubCategory.Name) courses</h2>
+        <p>See why millions of people turn to Udemy’s real-world experts to learn Python. Learn at your own pace with <br /> hands-on exercises and quizzes. Our courses are frequently updated so you’ll always be working from the latest <br /> information. This is the training you’ll need to become a professional Python developer.</p>
+        <div class="small-table">
+            <div class="circle">
+                <i class="fa-solid fa-exclamation"></i>
+            </div>
+            <h3>Not sure? All courses have a 30-day money-back guarantee</h3>
+        </div>
+        <div class="card-container">
+           @foreach (var crs in Model.AllCourses)
+        {
+            <div class="courses-card">
+                <div class="top">
+                    <img src="~/uploads/CourseImages/@crs.PosterImageName" alt="">
+                </div>
+                <div class="bottom">
+                    <a asp-action="detail" asp-controller="course" asp-route-id="@crs.Id"><h3>@crs.Name</h3></a>
+                    <p>@crs.Description</p>
+                    <p>@crs.Creator</p>
+                    <div class="rating">
+                        <h4>@crs.OverallRate</h4>
+                        <div class="star">
+                            @for (int i = 1; i <= 5; i++)
+                            {
+                                <i class="@(i<=crs.OverallRate?"fa fa-star":"fa-regular fa-star")"></i>
+                            }
+                        </div>
+                        <p>(@crs.CourseReviews.Count())</p>
+                    </div>
+                    <div class="mini-info">
+                        <p>@crs.TotalHours total hours</p>
+                        <p>@crs.LectureCount lectures</p>
+                        <p>@crs.ContentLevel</p>
+                    </div>
+                </div>
+                <div class="price">
+                    @if (crs.DiscountPercent > 0)
+                    {
+                        <h3>$@((crs.Price * (100 - crs.DiscountPercent) / 100).ToString("0.00"))</h3>
+                        <del>$@crs.Price.ToString("0.00")</del>
+                    }
+                    else
+                    {
+                        <h3>$@crs.Price.ToString("0.00")</h3>
+                    }
+                </div>
+            </div>
+            <div class="solid"></div>
+        }
+        </div>
+    </div>
+@if (Model.SubCategory != null)
+{
+    <div class="info">
+        <h1>Learn more about @Model.SubCategory.Name</h1>
+        <p>@Model.SubCategory.ExploreText</p>
+        <h2>Frequently asked question</h2>
+        <div class="solid"></div>
+        <h3>What is @Model.SubCategory.Name?</h3>
+        <p>@Model.SubCategory.FAQText</p>
+    </div>
+}

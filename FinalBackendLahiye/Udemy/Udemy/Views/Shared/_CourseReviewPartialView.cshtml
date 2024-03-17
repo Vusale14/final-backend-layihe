@@ -1,0 +1,26 @@
+﻿@model CourseReviewViewModel
+<form method="post" asp-action="addcomment" asp-controller="course">
+    <h2>Add a review</h2>
+    <fieldset class="rating">
+        <p class="d-inline-block me-2">Rating</p>
+        <input type="radio" id="star5" asp-for="CourseReview.Rate" value="5" />
+        <label class="full" for="star5" title="Awesome - 5 stars"></label>
+        <input type="radio" id="star4" asp-for="CourseReview.Rate" value="4" />
+        <label class="full" for="star4" title="Pretty good - 4 stars"></label>
+        <input type="radio" id="star3" asp-for="CourseReview.Rate" value="3" />
+        <label class="full" for="star3" title="Meh - 3 stars"></label>
+        <input type="radio" id="star2" asp-for="CourseReview.Rate" value="2" />
+        <label class="full" for="star2" title="Kinda bad - 2 stars"></label>
+        <input type="radio" id="star1" asp-for="CourseReview.Rate" value="1" />
+        <label class="full" for="star1" title="Sucks big time - 1 star"></label>
+    </fieldset>
+    <div class="your-review" >
+        <textarea style="height:100px;width:400px !important;padding:10px;" asp-for="CourseReview.ReviewText" type="text" placeholder="Your review *"></textarea>
+        <span asp-validation-for="CourseReview.ReviewText"></span>
+    </div>
+    <input asp-for="CourseId" value="@Model.CourseId" hidden />
+    <div style="color:red;" asp-validation-summary="ModelOnly"></div>
+    <button type="submit" class="submit-review">
+        <p>Submit Review</p>
+    </button>
+</form>

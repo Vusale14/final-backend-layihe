@@ -1,0 +1,78 @@
+﻿@model Course
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <h1>Edit Course Data</h1>
+        <form asp-action="edit" enctype="multipart/form-data" method="post">
+            <div class="form-group">
+                <label asp-for="Name">Name*</label>
+                <input class="form-control" asp-for="Name">
+                <span class="text-danger" asp-validation-for="Name"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Creator">Creator*</label>
+                <input class="form-control" asp-for="Creator">
+                <span class="text-danger" asp-validation-for="Creator"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description">Description</label>
+                <input class="form-control" asp-for="Description">
+                <span class="text-danger" asp-validation-for="Description"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SubCategoryId">SubCategory*</label>
+                <select asp-for="SubCategoryId">
+                    @foreach (var item in ViewBag.SubCategories)
+                    {
+                        <option value="@item.Id">@item.Name</option>
+                    }
+                </select>
+                <span class="text-danger" asp-validation-for="SubCategoryId"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TotalHours">Total Hours*</label>
+                <input class="form-control" asp-for="TotalHours">
+                <span class="text-danger" asp-validation-for="TotalHours"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LectureCount">Lecture Count*</label>
+                <input class="form-control" asp-for="LectureCount">
+                <span class="text-danger" asp-validation-for="LectureCount"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContentLevel">Content Level*</label>
+                <select asp-for="ContentLevel">
+                    <option value="Beginner">Beginner</option>
+                    <option value="Intermidate">Intermidate</option>
+                    <option value="Advanced">Advanced</option>
+                </select>
+                <span class="text-danger" asp-validation-for="ContentLevel"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price">Price*</label>
+                <input class="form-control" asp-for="Price">
+                <span class="text-danger" asp-validation-for="Price"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DiscountPercent">Discount Percent*</label>
+                <input class="form-control" asp-for="DiscountPercent">
+                <span class="text-danger" asp-validation-for="DiscountPercent"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PosterImage">New Poster Image</label>
+                <input class="form-control" asp-for="PosterImage">
+                <span class="text-danger" asp-validation-for="PosterImage"></span>
+            </div>
+            @if (Model.PosterImageName!=null)
+            {
+                <div>
+                    <p>Exist Slider Image</p>
+                    <img style="border:dotted;" width="300" src="~/uploads/CourseImages/@Model.PosterImageName" />
+                </div>
+            }
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <button type="submit" class="btn btn-primary" style="margin-top:20px;">Submit</button>
+        </form>
+    </div>
+</div>
+
+

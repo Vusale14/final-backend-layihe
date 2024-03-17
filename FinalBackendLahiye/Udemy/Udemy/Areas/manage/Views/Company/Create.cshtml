@@ -1,0 +1,15 @@
+﻿@model Company
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <h1>Create Company Data</h1>
+        <form asp-action="create" enctype="multipart/form-data" method="post">
+            <div class="form-group">
+                <label asp-for="LogoImage">Logo Image*</label>
+                <input class="form-control" asp-for="LogoImage">
+                <span class="text-danger" asp-validation-for="LogoImage"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+

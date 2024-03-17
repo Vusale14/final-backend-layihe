@@ -1,0 +1,123 @@
+﻿@model CartViewModel
+@{
+    Course firstCourse = Model.UserCourses.FirstOrDefault();
+    List<Course> otherCourses = Model.UserCourses.Skip(1).ToList();
+}
+ <div class="main-card-side">
+    <div class="main-cart">
+        <h1>Shopping Cart</h1>
+        <div class="solid"></div>
+        <div class="main-cart-section">
+            <div class="course-field">
+                <img src="~/uploads/CourseImages/@firstCourse.PosterImageName" alt="">
+                <div class="course-info-field">
+                    <h4>@firstCourse.Name</h4>
+                    <p>@firstCourse.Creator</p>
+                    <div class="rating">
+                        <h4>@firstCourse.OverallRate</h4>
+                        <div class="star">
+                            @for (int i = 1; i <= 5; i++)
+                            {
+                                <i class="@(i<=firstCourse.OverallRate?"fa fa-star":"fa-regular fa-star")"></i>
+                            }
+                        </div>
+                        <p>(@firstCourse.CourseReviews.Count())</p>
+                    </div>
+                    <div class="mini-info">
+                        <p style="margin-right:10px;">@firstCourse.TotalHours total hours</p>
+                        <p style="margin-right:10px;">@firstCourse.LectureCount lectures</p>
+                        <p style="margin-right:10px;">@firstCourse.ContentLevel</p>
+                    </div>
+                </div>
+                <div class="price">
+                    @if (firstCourse.DiscountPercent == 0)
+                    {
+                        <h3>$@firstCourse.Price.ToString("0.00")</h3>
+                    }
+                    else
+                    {
+                        <h3>$@((firstCourse.Price * (100 - firstCourse.DiscountPercent) / 100).ToString("0.00"))</h3>
+                        <del>$@firstCourse.Price.ToString("0.00")</del>
+                    }
+
+                </div>
+                <a asp-action="removecartitem" asp-controller="course" asp-route-id="@firstCourse.Id"><i class="fa-solid fa-trash fa-xl" style="color: #ad0000;"></i></a>
+            </div>
+            <div style="margin-top:-50px;" class="right-cart-field">
+                @if (Model.TotalDiscountPercent != 0)
+                {
+                    <h2>Total:</h2>
+                    <h1>$@Model.NewTotalPrice.ToString("0.00")</h1>
+                    <del>$@Model.OldTotalPrice.ToString("0.00")</del>
+                    <p>@(Model.TotalDiscountPercent.ToString("0.00"))% off</p>
+                }
+                else
+                {
+                    <h2>Total:</h2>
+                    <h1>$@Model.NewTotalPrice.ToString("0.00")</h1>
+                }
+
+                <a asp-action="checkout" asp-controller="course">
+                    <button>
+                        <h3>Checkout</h3>
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div class="solid"></div>
+        <div class="main-cart-section">
+            @foreach (var crs in otherCourses)
+            {
+                <div class="course-field">
+                    <img src="~/uploads/CourseImages/@crs.PosterImageName" alt="">
+                    <div class="course-info-field">
+                        <h4>@crs.Name</h4>
+                        <p>@crs.Creator</p>
+                        <div class="rating">
+                            <h4>@crs.OverallRate</h4>
+                            <div class="star">
+                                @for (int i = 1; i <= 5; i++)
+                                {
+                                    <i class="@(i<=crs.OverallRate?"fa fa-star":"fa-regular fa-star")"></i>
+                                }
+                            </div>
+                            <p>(@crs.CourseReviews.Count())</p>
+                        </div>
+                        <div class="mini-info">
+                            <p>@crs.TotalHours total hours</p>
+                            <p>@crs.LectureCount lectures</p>
+                            <p>@crs.ContentLevel</p>
+                        </div>
+                    </div>
+                    <div class="price">
+                        @if (crs.DiscountPercent == 0)
+                        {
+                            <h3>$@crs.Price.ToString("0.00")</h3>
+                        }
+                        else
+                        {
+                            <h3>$@((crs.Price * (100 - crs.DiscountPercent) / 100).ToString("0.00"))</h3>
+                            <del>$@crs.Price.ToString("0.00")</del>
+                        }
+                    </div>
+                    <a asp-action="removecartitem" asp-controller="course" asp-route-id="@crs.Id"><i class="fa-solid fa-trash fa-xl" style="color: #ad0000;"></i></a>
+                </div>
+            }
+        </div>
+    </div>
+ </div>
+    <div class="viewing">
+        <h2>You might also like</h2>
+        <button id="prev-slide" class="slide-button material-symbols-rounded">chevron_left</button>
+        <div class="card-container">
+            @foreach (var crs in Model.MightLikeCourses)
+        {
+            @Html.Partial("_CourseCardPartialView",crs)
+        }
+        </div>
+        <button id="next-slide" class="slide-button material-symbols-rounded">chevron_right</button>
+    </div>
+
+        @section ScriptsCart{
+    <script src="~/js/script-cart.js"></script>
+        }

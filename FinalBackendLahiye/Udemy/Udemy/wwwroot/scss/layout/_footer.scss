@@ -1,0 +1,108 @@
+.footer {
+    background-color: rgba(0, 0, 0, 0.894);
+    font-family: "Work Sans";
+    padding-top: 20px;
+
+    .frst-sctn {
+      @include container;
+      display: flex;
+      justify-content: space-around;
+
+
+      .field-left {
+
+        >h1 {
+          font-size: 140%;
+          font-weight: 500;
+          padding-top: 20px;
+          color: white;
+
+          @include for-size(tablet) {
+            font-size: 110%;
+          }
+        }
+
+        >p {
+          width: 400px;
+          font-size: 90%;
+          font-weight: 400;
+          padding-top: 10px;
+          line-height: 25px;
+          color: white;
+
+          @include for-size(tablet) {
+            width: 280px;
+            font-size: 80%;
+          }
+
+          @include for-size(mobile) {
+            width: 200px;
+          }
+        }
+      }
+
+      .field-middle {
+        padding-right: -100px;
+
+        >h1 {
+          font-size: 160%;
+          font-weight: 600;
+          padding-top: 20px;
+          color: white;
+
+          @include for-size(tablet) {
+            font-size: 110%;
+          }
+        }
+        
+        >p {
+          width: 400px;
+          font-size: 90%;
+          font-weight: 400;
+          padding-top: 10px;
+          line-height: 25px;
+          color: white;
+
+          @include for-size(tablet) {
+            width: 280px;
+            font-size: 80%;
+          }
+
+          @include for-size(mobile) {
+            width: 200px;
+          }
+        }
+      }
+  
+      .field-right {
+  
+        >p {
+          width: 400px;
+          font-size: 90%;
+          font-weight: 400;
+          padding-top: 10px;
+          padding-left: 50px;
+          line-height: 25px;
+          color: white;
+
+          @include for-size(tablet) {
+            width: 280px;
+            font-size: 80%;
+          }
+
+          @include for-size(mobile) {
+            width: 200px;
+          }
+        }
+
+        .inc {
+          padding-top: 120px;
+          padding-left: 220px;
+
+          @include for-size(tablet) {
+            padding-left: 100px;
+          }
+        }
+      }
+    }
+  }

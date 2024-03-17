@@ -1,0 +1,454 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    .black {
+        width: 100%;
+        height: 400px;
+        background-color: rgba(0, 0, 0, 0.815);
+        font-family: "Work Sans";
+
+        .left {
+            width: 900px;
+            padding-left: 200px;
+            padding-top: 80px;
+
+            @include for-size(tablet) {
+                width: 700px;
+                padding-right: 10px;
+            }
+
+            >h1 {
+                color: white;
+                line-height: 40px;
+            }
+
+            >h3 {
+                padding-top: 20px;
+                color: white;
+                line-height: 25px;
+            }
+
+            .rating {
+                padding-top: 20px;
+                display: flex;
+                gap: 10px;
+                color: white;
+            }
+
+            >p {
+                padding-top: 20px;
+            }
+        }
+    }
+
+    .main-field {
+        display: flex;
+        gap: 50px;
+        @include container;
+        margin-top: 50px;
+
+        .left-side {
+            width: 800px;
+            height: 620px;
+            border: 1px solid black;
+            margin-left: 50px;
+            padding-left: 50px;
+            padding-top: 50px;
+            font-family: "Work Sans";
+
+            @include for-size(tablet) {
+                width: 500px;
+                height: 700px;
+                margin-left: 16px;
+            }
+
+            @include for-size(mobile) {
+                width: 450px;
+                margin-left: -5px;
+                height: 712px;
+            }
+
+            >h1 {
+                font-weight: 600;
+                padding-bottom: 20px;
+
+                @include for-size(tablet) {
+                    font-size: 120%;
+                }
+            }
+
+            .option {
+                display: flex;
+                gap: 80px;
+
+                @include for-size(tablet) {
+                    gap: 50px;
+                }
+
+                .left {
+                    width: 300px;
+                }
+
+                .right {
+                    width: 300px;
+
+                    @include for-size(tablet) {
+                        padding-right: 30px;
+                    }
+                }
+
+                p {
+                    font-size: large;
+                    padding-top: 20px;
+                    line-height: 20px;
+
+                    @include for-size(tablet) {
+                        font-size: 90%;
+                    }
+                }
+            }
+        }
+
+        .right-side {
+            width: 300px;
+            height: 595px;
+            border: 1px solid black;
+            font-family: "Work Sans";
+            margin-top: 25px;
+
+            @include for-size(tablet) {
+                width: 250px;
+                height: 660px;
+                margin-top: 38px;
+            }
+
+            @include for-size(mobile) {
+                width: 200px;
+                margin-top: 52px;
+            }
+
+            video {
+                margin-top: -26px;
+
+                @include for-size(tablet) {
+                    width: 250px;
+                    margin-top: -40px;
+                }
+
+                @include for-size(mobile) {
+                    width: 200px;
+                    margin-top: -55px;
+                }
+            }
+
+            >h1 {
+                padding-left: 20px;
+                padding-top: 20px;
+            }
+
+            button {
+                background-color: #a435f0;
+                width: 260px;
+                margin-left: 20px;
+                margin-top: 10px;
+                padding-bottom: 20px;
+                padding-right: 20px;
+                cursor: pointer;
+
+                @include for-size(tablet) {
+                    width: 200px;
+                }
+
+                @include for-size(mobile) {
+                    width: 150px;
+                }
+    
+                >h3 {
+                    color: white;
+                }
+            }
+
+            button:hover {
+                background-color: #a535f0ca;
+            }
+
+            p {
+                padding-left: 30px;
+                padding-top: 10px;
+
+                @include for-size(tablet) {
+                    font-size: 90%;
+                    line-height: 20px;
+                }
+
+                @include for-size(mobile) {
+                    line-height: 15px;
+                }
+            }
+
+            h3 {
+                padding-top: 20px;
+                padding-left: 20px;
+            }
+
+            .p {
+                padding-left: 25px;
+            }
+        }
+    }
+
+    .table {
+        height: 3180px;
+        border: 1px solid gray;
+        @include container;
+        padding-top: 40px;
+        background-color: rgba(128, 128, 128, 0.11);
+        margin-top: 50px;
+
+        @include for-size(tablet) {
+            height: 3850px;
+        }
+
+        @include for-size(mobile) {
+            height: 4320px;
+        }
+
+        .requirements {
+            @include container;
+            padding-left: 50px;
+            font-family: "Work Sans";
+            
+            ul {
+    
+                >h2 {
+                    padding-bottom: 20px;
+                    font-weight: 600;
+                }
+    
+                >li {
+                    padding-top: 20px;
+                    font-size: 120%;
+                }
+            }
+        }
+    
+        .description {
+            @include container;
+            padding-left: 50px;
+            font-family: "Work Sans";
+    
+            >h2 {
+                padding-top: 50px;
+                padding-bottom: 20px;
+                font-weight: 600;
+            }
+    
+            >h3 {
+                padding-top: 20px;
+                font-weight: 600;
+            }
+    
+            >p {
+                padding-top: 30px;
+                line-height: 30px;
+                font-size: 120%;
+            }
+    
+            >#p1 {
+                padding-top: 50px;
+            }
+    
+            >#h3-1   {
+                padding-top: 50px;
+            }
+    
+            >#h3-2   {
+                padding-top: 50px;
+            }
+        }
+    
+        .covered {
+            @include container;
+            padding-left: 50px;
+            font-family: "Work Sans";
+    
+            ul {
+                
+                >h3 {
+                    padding-top: 50px;
+                    font-weight: 600;
+                }
+        
+                >li {
+                    padding-top: 30px;
+                    line-height: 30px;
+                    font-size: 120%;
+                }
+            }
+        }
+    
+        .package {
+            @include container;
+            padding-left: 50px;
+            font-family: "Work Sans";
+    
+            ul {
+                
+                >h3 {
+                    padding-top: 50px;
+                    font-weight: 600;
+                }
+        
+                >li {
+                    padding-top: 30px;
+                    line-height: 30px;
+                    font-size: 120%;
+                }
+            }
+        }
+    
+        .who {
+            @include container;
+            padding-left: 50px;
+            font-family: "Work Sans";
+    
+            ul {
+                
+                >h2 {
+                    padding-top: 50px;
+                    font-weight: 600;
+                }
+        
+                >li {
+                    padding-top: 30px;
+                    line-height: 30px;
+                    font-size: 120%;
+                }
+            }
+        }
+    }
+
+    .user-comment {
+        @include container;
+        margin-top: 50px;
+
+        .star {
+            margin-top: 20px;
+            
+            >.fa-star {
+                width: 30px;
+                color: rgb(246, 188, 62);
+            }
+        }
+
+        .your-review {
+            margin-top: 20px;
+            
+            input {
+                width: 1250px;
+                height: 150px;
+                padding-bottom: 100px;
+                padding-left: 10px;
+
+                @include for-size(tablet) {
+                    width: 830px;
+                }
+
+                @include for-size(mobile) {
+                    width: 690px;
+                }
+            }
+        }
+
+        .user-info {
+            display: flex;
+            gap: 50px;
+            margin-top: 20px;
+
+            .enter-name {
+                
+                input {
+                    padding-left: 10px;
+                    width: 600px;
+                    height: 50px;
+
+                    @include for-size(tablet) {
+                        width: 390px;
+                    }
+
+                    @include for-size(mobile) {
+                        width: 320px;
+                    }
+                }
+            }
+
+            .enter-email {
+                
+                input {
+                    padding-left: 10px;
+                    width: 600px;
+                    height: 50px;
+
+                    @include for-size(tablet) {
+                        width: 390px;
+                    }
+
+                    @include for-size(mobile) {
+                        width: 320px;
+                    }
+                }
+            }
+        }
+
+        .submit-review {
+            background-color: rgb(255, 50, 77);
+            border: 1px solid rgb(255, 50, 77);
+            border-radius: 10px;
+            margin-top: 20px;
+            width: 200px;
+            height: 50px;
+            cursor: pointer;
+
+            p {
+                color: white;
+            }
+        }
+
+        .submit-review:hover {
+            background-color: rgba(255, 50, 77, 0.788);
+        }
+
+        .comment-text {
+            display: grid;
+            grid-template-columns: repeat(3, 10fr);
+            height: 200px;
+            overflow: auto;
+            
+            .user-comment-text {
+                width: 300px;
+                margin-top: 40px;
+
+                @include for-size(tablet) {
+                    width: 220px;
+                }
+
+                @include for-size(mobile) {
+                    width: 180px;
+                }
+
+                p {
+                    padding-top: 10px;
+                }
+            }
+        }
+    }
+
+    .footer-for-detail {
+        margin-top: 0;
+    }
+}

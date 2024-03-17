@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    .main-cart {
+        font-family: "Work Sans";
+        margin-top: 50px;
+
+        >h1 {
+            padding-left: 120px;
+            font-size: 250%;
+            font-weight: 600;
+            color: rgba(0, 0, 0, 0.815);
+            padding-bottom: 40px;
+        }
+
+        .solided {
+            width: 1200px;
+            margin-left: 110px;
+
+            @include for-size(tablet) {
+                width: 700px;
+                margin-bottom: 20px;
+            }
+
+            @include for-size(mobile) {
+                width: 600px;
+            }
+        }
+
+        #main-cart-section {
+            padding-bottom: 40px;
+        }
+
+        .main-cart-section {
+            display: flex;
+
+            .course-field {
+                display: flex;
+                padding-left: 110px;
+    
+                >#img {
+                    width: 300px;
+                    height: 200px;
+
+                    @include for-size(tablet) {
+                        width: 200px;
+                        height: 160px;
+                    }
+                }
+    
+                #my-courses-info {
+                    width: 800px;
+                    padding-left: 30px;
+
+                    @include for-size(tablet) {
+                        width: 500px;
+                    }
+
+                    @include for-size(mobile) {
+                        width: 300px;
+                    }
+    
+                    >a {
+                        text-decoration: none;
+                        color: black;
+                        font-size: 120%;
+
+                        @include for-size(mobile) {
+                            font-size: 100%;
+                            line-height: 20px;
+                        }
+                    }
+    
+                    >p {
+                        padding-top: 30px;
+                        padding-bottom: 30px;
+                        font-size: 120%;
+
+                        @include for-size(mobile) {
+                            font-size: 100%;
+                            padding-bottom: 20px;
+                        }
+                    }
+    
+                    .rating {
+                        display: flex;
+                        gap: 10px;
+                    }
+    
+                    .mini-info {
+                        display: flex;
+                        padding-top: 10px;
+                        gap: 20px;
+
+                        >p {
+
+                            @include for-size(mobile) {
+                                font-size: 85%;
+                                padding-top: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

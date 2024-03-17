@@ -1,0 +1,253 @@
+.navbar {
+    background-color: gray;
+    height: 80px;
+    width: 100%;
+    padding-top: 20px;
+
+    @include for-size(tablet) {
+        display: flex;
+        justify-content: space-between;
+        padding: 30px;
+    }
+
+    .fa-bars {
+        display: none;
+        position: relative;
+        
+        @include for-size(tablet) {
+            display: initial;
+        }
+
+        .bar-menu {
+            display: none;
+        }
+    }
+
+    .fa-bars:hover {
+        
+        .bar-menu {
+            position: absolute;
+            display: block;
+            width: 300px;
+            height: 200px;
+            background-color: gray;
+        }
+    }
+    
+    .sidebar {
+        display: none;
+        width: 200px;
+        height: 100%;
+        position: fixed;
+        z-index: 2;
+        right: -300px;
+        top: 0;
+        transition: 0.4s;
+        background-color: grey;
+        padding: 10px 0;
+
+
+        @include for-size(tablet) {
+            width: 300px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .fa-xmark {
+            margin-top: -350px;
+            margin-left: 260px;
+        }
+
+        a {
+            text-decoration: none
+        }
+
+        a {
+            font-size: 140%;
+            color: white;
+            padding: 20px;
+            cursor: pointer;
+
+            &:hover {
+                color: rgba(255, 255, 255, 0.274);
+            }
+        }
+
+        p {
+            font-size: 140%;
+            color: white;
+            cursor: pointer;
+        }
+
+        button {
+            margin-left: -10px;
+        }
+    }
+
+    .sidebar.open{
+        left: 0;
+    }
+    
+    .fa-house {
+        display: none;
+    
+        @include for-size(tablet) {
+            display: initial;
+        }
+    }
+    
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 5%;
+
+        @include for-size(tablet) {
+            display: none;
+        }
+
+        .number {
+            position: relative;
+
+            .card-number {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                background-color: red;
+                border-radius: 50%;
+                right: 20px;
+                top: -5px;
+    
+                p {
+                    color: white;
+                }
+            }
+    
+        }
+
+        li {
+
+            input {
+                position: relative;
+                width: 300px;
+                height: 30px;
+                border-radius: 20px;
+                border: none;
+                padding-left: 40px;
+                outline: none;
+            }
+    
+            .fa-magnifying-glass {
+                position: absolute;
+                right: 300px;
+                top: 16px;
+            }
+
+            .dropdown-menu {
+                display: none;
+            }
+
+            #drop {
+                width: 300px;
+            }
+        }
+
+        li:focus {
+
+            .dropdown-menu {
+                display: block;
+            }
+        }
+
+        li {
+            padding: 10px 30px;
+            position: relative;
+
+            a {
+
+                h1 {
+                    font-weight: 600;
+                    font-size: 115%;
+                }
+            }
+
+            .dropdown-menu {
+                display: none;
+
+                ul {
+                    display: block;
+                    margin: 10px;
+
+                    li {
+                        width: 150px;
+                        padding: 10px;
+
+                        a {
+                            color: white;
+                            text-decoration: none;
+                            font-size: 20px;
+                            transition: all 0.3s;
+                        }
+
+                        a:hover {
+                            color: blue;
+                        }
+
+                        .dropdown-menu-2 {
+                            display: none;
+                        }
+                    }
+
+                    li:hover {
+
+                        .dropdown-menu-2 {
+                            display: block;
+                            position: absolute;
+                            top: 100%;
+                            margin-top: -20px;
+                            margin-left: 140px;
+                            z-index: 1;
+                            background-color: rgb(201, 199, 199);
+                        }
+                    }
+                }
+            }
+
+            a {
+                color: white;
+                text-decoration: none;
+                font-size: 20px;
+                transition: all 0.3s;
+            }
+
+            a:hover {
+                color: blue;
+            }
+        }
+
+        li:hover {
+
+            .dropdown-menu {
+                display: block;
+                position: absolute;
+                top: 100%;
+                z-index: 1;
+                background-color: rgb(201, 199, 199);
+
+                ul {
+                    display: block;
+                    margin: 10px;
+
+                    li {
+                        width: 150px;
+                        padding: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

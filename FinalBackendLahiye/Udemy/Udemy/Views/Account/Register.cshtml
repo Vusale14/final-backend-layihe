@@ -1,0 +1,25 @@
+﻿@model UserRegisterViewModel
+    <form id="form" asp-action="register" asp-controller="account" method="post" >
+        <h2>Create account</h2>
+        <p>Welcome! Enter your details and start learning</p>
+    <div style="margin-bottom:10px;" class="input-control">
+            <input type="text" placeholder="Username" id="username" asp-for="Username" class="username">
+        <span style="color:red;" asp-validation-for="Username"></span>
+        </div>
+    <div style="margin-bottom:10px;" class="input-control">
+            <input type="email" placeholder="Email" id="email" asp-for="Email" class="email">
+        <span style="color:red;" asp-validation-for="Email"></span>
+        </div>
+    <div style="margin-bottom:10px;" class="input-control">
+            <input type="password" placeholder="Password" id="password" asp-for="Password" class="password">
+        <span style="color:red;" asp-validation-for="Password"></span>
+        </div>
+    <div style="margin-bottom:10px;" class="input-control">
+            <input type="password" placeholder="Confirm Password" id="confirm-password" asp-for="ConfirmPassword" class="confirm-password">
+        <span style="color:red;" asp-validation-for="ConfirmPassword"></span>
+        </div>
+    <div style="color:red;" asp-validation-summary="ModelOnly"></div>
+        <button type="submit" class="btn" id="btn">
+            <h3>Sign Up</h3>
+        </button>
+    </form>

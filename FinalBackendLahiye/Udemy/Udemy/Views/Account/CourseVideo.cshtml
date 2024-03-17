@@ -1,0 +1,22 @@
+﻿@model Course
+    <div class="video-field">
+        <div class="left-video-field">
+            <video width="850" height="485" controls>
+                <source src="~/uploads/CourseVideos/@Model.CourseVideos.FirstOrDefault().VideoName" type="video/mp4">
+            </video>
+        </div>
+        <div class="right-video-field">
+            @foreach (var vd in Model.CourseVideos)
+        {
+            <video width="200" height="160" controls>
+                <source src="~/uploads/CourseVideos/@vd.VideoName" type="video/mp4">
+            </video>
+        }
+        </div>
+        <div class="slider-scrollbar">
+            <div class="scrollbar-track">
+                <div class="scrollbar-thumb">
+                </div>
+            </div>
+        </div>
+    </div>

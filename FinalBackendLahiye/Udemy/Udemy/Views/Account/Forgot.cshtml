@@ -1,0 +1,13 @@
+﻿@model UserForgotViewModel
+<form id="form" class="two" asp-action="forgot" asp-controller="account" method="post">
+    <h2>Forgot password</h2>
+    <div style="margin-bottom:20px;" class="input-control">
+        <input type="email" placeholder="Email" id="email" asp-for="Email" class="username">
+        <span style="color:red;" asp-validation-for="Email"></span>
+    </div>
+    <div style="color:red;" asp-validation-summary="ModelOnly"></div>
+    <button type="submit" class="btn" id="btn">
+        <h3>Send reset mail</h3>
+    </button>
+</form>
+

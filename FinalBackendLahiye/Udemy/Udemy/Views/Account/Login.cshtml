@@ -1,0 +1,18 @@
+﻿  @model UserLoginViewModel
+ <form id="form" class="two" asp-action="login" asp-controller="account" method="post">
+        <h2>Log in to your Udemy account</h2>
+        <div class="input-control" style="margin-bottom:20px;">
+            <input type="text" placeholder="Username" id="username" asp-for="Username" class="username">
+        <span style="color:red;" asp-validation-for="Username"></span>
+        </div>
+    <div class="input-control" style="margin-bottom:20px;">
+            <input type="password" placeholder="Password" id="password" asp-for="Password" class="password">
+        <span style="color:red;" asp-validation-for="Password"></span>
+        </div>
+    <div style="color:red;" asp-validation-summary="ModelOnly"></div>
+    <button style="margin-bottom:20px;" type="submit" class="btn" id="btn">
+            <h3>Log In</h3>
+        </button>
+    <a asp-action="forgot" asp-controller="account" >Forgot Password?</a>
+    </form>
+

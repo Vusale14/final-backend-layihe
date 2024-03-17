@@ -1,0 +1,537 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+  .title {
+   @include container;
+   line-height: 40px;
+   font-family: "Poppins";
+
+   h1 {
+     font-weight: 500;
+     padding-top: 60px;
+   }
+
+   >h2 {
+     font-weight: 500;
+   }
+
+   >h3 {
+     font-weight: 500;
+   }
+
+   .learners {
+       display: flex;
+       gap: 10px;
+
+       >.fa-user {
+          padding-top: 10px;
+       }
+   }
+
+    h2 {
+      padding-top: 40px;
+    }
+  }
+
+  .card-container {
+    @include container;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+
+    @include for-size(tablet) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      .forth-courses-card, .fifth-courses-card
+      {
+        display: none;
+      }
+    }
+
+    .courses-card {
+
+         .top {
+           padding-top: 20px;
+     
+           >img {
+             width: 230px;
+             height: 150px;
+           }
+         }
+     
+         .bottom {
+           padding-top: 10px;
+
+           >a {
+             text-decoration: none;
+             color: black;
+           }
+     
+           >p {
+             padding-top: 5px;
+           }
+     
+           .rating {
+             display: flex;
+             gap: 10px;
+             padding-top: 10px;
+     
+             .star {
+               display: flex;
+               gap: 0;
+             }
+           }
+     
+           .price {
+             display: flex;
+             gap: 10px;
+             padding-top: 10px;
+           }
+         }
+     }
+
+     .tablet {
+
+      @include for-size(tablet) {
+        display: none;
+      }
+     }
+  }
+   
+  .second {
+    padding-top: 20px;
+
+    .tablet {
+
+      @include for-size(tablet) {
+        display: none;
+      }
+    }
+  }
+
+  .all-courses {
+    @include container;
+    padding-top: 60px;
+    padding-bottom: 40px;
+
+    >h2 {
+      font-family: "Work Sans";
+
+      @include for-size(tablet) {
+        padding-bottom: 10px;
+      }
+    }
+
+    >p {
+
+      @include for-size(tablet) {
+        line-height: 20px;
+      }
+    }
+
+    #see {
+      padding-top: 20px;
+      font-family: "Work Sans";
+      line-height: 30px;
+      font-size: 120%;
+    }
+
+    .small-table {
+      display: flex;
+      gap: 20px;
+      width: 1250px;
+      height: 70px;
+      border: 1px solid rgba(0, 0, 0, 0.26);
+      margin-top: 20px;
+      padding-top: 18px;
+      padding-left: 20px;
+      margin-bottom: 40px;
+
+      @include for-size(tablet) {
+        width: 800px;
+      }
+
+      @include for-size(mobile) {
+        width: 700px;
+      }
+
+      >h3 {
+        font-family: "Work Sans";
+        padding-top: 5px;
+      }
+
+      .circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        background-color: rgba(0, 0, 0, 0.825);
+        border-radius: 50%;
+
+        >i {
+          color: white;
+        }
+      }
+    }
+
+     >.card-container {
+       display: table-row;
+       padding-top: 20px;
+       font-family: "Work Sans";
+
+       @include for-size(tablet) {
+        .forth-courses-card, .fifth-courses-card {
+          display: none;
+        }
+       }
+
+       >.courses-card {
+         display: flex;
+         gap: 20px;
+         width: 1250px;
+
+         @include for-size(tablet) {
+          width: 800px;
+         }
+
+         @include for-size(mobile) {
+          width: 600px;
+         }
+
+         >.top {
+
+           img {
+             width: 400px;
+             height: 200px;
+
+             @include for-size(tablet) {
+              width: 380px;
+             }
+
+             @include for-size(mobile) {
+              height: 300px;
+              width: 250px;
+             }
+           }
+         }
+
+         >.bottom {
+           padding-top: 20px;
+           line-height: 20px;
+
+           >h3 {
+
+            @include for-size(tablet) {
+              font-size: 100%;
+              line-height: 10px;
+            }
+           }
+
+           >p {
+             line-height: 25px;
+             font-size: 110%;
+
+             @include for-size(tablet) {
+              font-size: 100%;
+             }
+           }
+
+           >.rating {
+
+             h4 {
+               padding-top: 7px;
+             }
+             
+             p {
+               padding-top: 5px;
+             }
+
+             .star {
+               padding-top: 8px;
+             }
+           }
+
+           .mini-info {
+             display: flex;
+             gap: 10px;
+             padding-top: 15px;
+           }
+         }
+
+         >.price {
+           padding-top: 45px;
+           padding-left: 20px;
+         }
+       }
+
+       .seven {
+
+         .price {
+           padding-left: 50px;
+        }
+       }
+
+       .eight {
+
+         .price {
+           padding-left: 80px;
+        }
+       }
+
+       .fifteen {
+
+         .price {
+           padding-left: 60px;
+        }
+       }
+
+       .card {
+
+         .price {
+           padding-left: 70px;
+         }
+       }
+
+       .cart {
+
+         .price {
+           padding-left: 250px;
+
+           @include for-size(mobile) {
+            padding-left: 150px;
+           }
+         }
+       }
+
+       .six-card {
+
+         .price {
+           padding-left: 110px;
+         }
+       }
+
+       .eight-card {
+
+         .price {
+           padding-left: 350px;
+
+           @include for-size(mobile) {
+            padding-left: 200px;
+           }
+         }
+       }
+
+       .ten-card {
+
+         .price {
+           padding-left: 150px;
+         }
+       }
+
+       .fourteen-card {
+
+         .price {
+           padding-left: 270px;
+
+           @include for-size(mobile) {
+            padding-left: 200px;
+           }
+         }
+       }
+
+       .fifteen-card {
+
+         .price {
+           padding-left: 130px;
+         }
+       }
+
+       .nine-card {
+
+         .price {
+           padding-left: 50px;
+         }
+       }
+
+       .ten-cart {
+
+         .price {
+           padding-left: 50px;
+         }
+       }
+
+       .thirteen-card {
+
+         .price {
+           padding-left: 180px;
+         }
+       }
+
+       .three-card {
+
+         .price {
+           padding-left: 70px;
+         }
+       }
+
+       .six-cart {
+
+         .price {
+           padding-left: 90px;
+         }
+       }
+
+       .seven-cart {
+
+         .price {
+           padding-left: 80px;
+         }
+       }
+
+       .eight-cart {
+
+         .price {
+           padding-left: 70px;
+         }
+       }
+
+       .twelve-card {
+
+         .price {
+           padding-left: 400px;
+         }
+       }
+
+       .thirteen-cart {
+
+         .price {
+           padding-left: 290px;
+         }
+       }
+
+       .card-ten {
+
+         .price {
+           padding-left: 150px;
+         }
+       }
+
+       .card-twelve {
+
+         .price {
+           padding-left: 210px;
+         }
+       }
+
+       .card-thirteen {
+
+         .price {
+           padding-left: 250px;
+         }
+       }
+
+       .card-fifteen {
+
+         .price {
+           padding-left: 50px;
+         }
+       }
+
+       .card-four {
+
+         .price {
+           padding-left: 250px;
+         }
+       }
+
+       .next-twelve {
+
+         .price {
+           padding-left: 230px;
+         }
+       }
+
+       .next-fourteen {
+
+         .price {
+           padding-left: 30px;
+         }
+       }
+
+       .next-fifteen {
+
+         .price {
+           padding-left: 290px;
+         }
+       }
+     }
+
+     .solid {
+       width: 1260px;
+       border: 1px solid rgba(0, 0, 0, 0.226);
+       margin-top: 15px;
+
+       @include for-size(tablet) {
+        width: 800px;
+       }
+
+       @include for-size(mobile) {
+        width: 700px;
+        margin-right: 20px;
+       }
+      }
+   }
+
+    .solid {
+     @include container;
+     width: 1260px;
+     border: 1px solid rgba(0, 0, 0, 0.209);
+     margin-bottom: 40px;
+
+     @include for-size(tablet) {
+      width: 900px;
+     }
+    }
+
+    .end {
+
+      @include for-size(tablet) {
+        width: 700px;
+      }
+
+      @include for-size(mobile) {
+        width: 600px;
+        margin-left: 40px
+       }
+    }
+
+   .info {
+     @include container;
+     width: 650px;
+     height: 500px;
+     padding-left: 20px;
+     
+     >p {
+       padding-top: 20px;
+     }
+
+     >h2 {
+       padding-top: 50px;
+     }
+
+     >.solid {
+       width: 620px;
+       border: 1px solid rgba(0, 0, 0, 0.199);
+       margin-top: 20px;
+       margin-right: 50px;
+     }
+   }
+}

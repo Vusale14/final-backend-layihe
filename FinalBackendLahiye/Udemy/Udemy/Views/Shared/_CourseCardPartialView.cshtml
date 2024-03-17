@@ -1,0 +1,31 @@
+﻿@model Course
+<div class="courses-card">
+    <div class="top">
+        <img src="~/uploads/CourseImages/@Model.PosterImageName" alt="">
+    </div>
+    <div class="bottom">
+        <a asp-action="detail" asp-controller="course" asp-route-id="@Model.Id"><h3>@Model.Name</h3></a>
+        <p>@Model.Creator</p>
+        <div class="rating">
+            <h4>@Model.OverallRate</h4>
+            <div class="star">
+                @for (int i = 1; i <= 5; i++)
+                {
+                    <i class="@(i<=Model.OverallRate?"fa fa-star":"fa-regular fa-star")"></i>
+                }
+            </div>
+            <p>(@(Model.CourseReviews.Count()))</p>
+        </div>
+        <div class="price">
+            @if (Model.DiscountPercent > 0)
+            {
+                <h3>$@((Model.Price * (100 - Model.DiscountPercent) / 100).ToString("0.00"))</h3>
+                <del>$@Model.Price.ToString("0.00")</del>
+            }
+            else
+            {
+                <h3>$@Model.Price.ToString("0.00")</h3>
+            }
+        </div>
+    </div>
+</div>

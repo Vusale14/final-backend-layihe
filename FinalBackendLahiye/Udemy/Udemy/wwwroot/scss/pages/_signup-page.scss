@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    form {
+        @include container;
+        width: 640px;
+        margin-top: 50px;
+        padding-left: 150px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        border: 1px solid black;
+        background-color: white;
+        font-family: "Work Sans";
+
+        @include for-size(tablet) {
+            width: 600px;
+        }
+
+        >h2 {
+            padding-left: 70px;
+
+            @include for-size(tablet) {
+                font-size: 120%;
+            }
+        }
+
+        >p {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            font-size: 92%;
+        }
+
+        .input-control {
+            display: flex;
+            flex-direction: column;
+
+            input {
+                width: 340px;
+                height: 60px;
+                align-items: center;
+                padding-left: 15px;
+                border: 1px solid black;
+                outline: none;
+
+                @include for-size(tablet) {
+                    width: 300px;
+                }
+            }
+
+            p {
+                visibility: hidden;
+            }
+        }
+
+        .input-control.success {
+    
+            input {
+                width: 340px;
+                height: 60px;
+                align-items: center;
+                padding-left: 15px;
+                border: 1px solid green;
+                outline: none;
+                border-radius: 0;
+
+                @include for-size(tablet) {
+                    width: 300px;
+                }
+            }       
+        }
+
+        .input-control.error {
+
+            input {
+                width: 340px;
+                height: 60px;
+                align-items: center;
+                padding-left: 15px;
+                border: 1px solid red;
+                outline: none;
+                border-radius: 0;
+                
+                @include for-size(tablet) {
+                    width: 300px;
+                }
+            }
+        }
+
+        button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 340px;
+            height: 60px;
+            border: 1px solid purple;
+            background-color: #a435f0;
+            outline: none;
+            cursor: pointer;
+
+            @include for-size(tablet) {
+                width: 300px;
+            }
+
+            >h3 {
+                color: white;
+            }
+        }
+
+        button:hover {
+            background-color: #a535f0ca;
+        }
+    }
+}

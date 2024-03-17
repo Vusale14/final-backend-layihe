@@ -1,0 +1,82 @@
+﻿@model AboutUsViewModel
+@{
+    var HeaderBanner = Model.Banners.FirstOrDefault(x => x.Type == "AboutUsHeader");
+    var VideoBanner = Model.Banners.FirstOrDefault(x => x.Type == "AboutUsVideo");
+}
+    <div class="section-one">
+        <div class="left-side-about-page">
+            <h1>@HeaderBanner.Title</h1>
+        </div>
+        <div class="right-side-about-page">
+            <img src="~/uploads/BannerImages/@HeaderBanner.ImageName" alt="">
+        </div>
+    </div>
+    <div class="section-two">
+        <h1>Skills are the key to unlocking potential</h1>
+        <p>Whether you want to learn a new skill, train your teams, or share what you know with the world,</p>
+        <p class="second-line">you’re in the right place. As a leader in online learning, we’re here to help you achieve your</p>
+        <p class="three-line">goals and transform your life.</p>
+    </div>
+    <div class="section-three">
+        <video width="600" height="350" controls>
+            <source src="~/uploads/BannerVideos/@VideoBanner.VideoName" type="video/mp4">
+        </video>
+        <div class="description">
+            <h1>@VideoBanner.Title</h1>
+            <p>@VideoBanner.Description</p>
+        </div>
+    </div>
+    <div class="section-four">
+        <h1>Creating impact around the world</h1>
+        <p>With our global catalog spanning the latest skills and topics, people and organizations</p>
+        <p class="line2">everywhere are able to adapt to change and thrive.</p>
+        <div class="line-first">
+            <div class="number">
+                <h1>69M</h1>
+                <h1>75K+</h1>
+                <h1>210K+</h1>
+                <h1>940M</h1>
+            </div>
+            <div class="letter">
+                <p>Learners</p>
+                <p>Instructors</p>
+                <p>Courses</p>
+                <p>Course enrollments</p>
+            </div>
+        </div>
+        <div class="line-second">
+            <div class="number">
+                <h1>75</h1>
+                <h1>15.7K+</h1>
+            </div>
+            <div class="letter">
+                <p>Languages</p>
+                <p>Enterprise customers</p>
+            </div>
+        </div>
+    </div>
+    <div class="supporter">
+        <div class="top">
+            <p>Trusted by over 15,000 companies and millions of learners around the world</p>
+        </div>
+        <div class="down">
+        @foreach(var cpy in Model.Companies)
+        {
+            <img src="~/uploads/CompanyImages/@cpy.LogoImageName" alt="">
+        }
+        </div>
+    </div>
+    <div class="section-five">
+        <p>We help organizations of all types and sizes prepare for the path ahead — wherever it leads. Our curated collection of business and technical courses help companies, governments, and</p>
+        <p class="nonprofits">nonprofits go further by placing learning at the center of their strategies. Learn more</p>
+    </div>
+    <div class="coment">
+       @foreach (var ins in Model.InstructorsReviews)
+    {
+        <div class="coment-article">
+            <p>@ins.Review</p>
+            <h5>@ins.Fullname</h5>
+            <span>@ins.Profession</span>
+        </div>
+    }
+    </div>

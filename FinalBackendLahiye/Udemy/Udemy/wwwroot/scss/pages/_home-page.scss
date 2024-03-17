@@ -1,0 +1,712 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+  
+  body {
+    
+    .slider {
+      @include container;
+        margin-top: 50px;
+        position: relative;  
+
+        .slide-button {
+          position: absolute;
+          top: 50%;
+          height: 50px;
+          width: 50px;
+          color: #fff;
+          border: none;
+          outline: none;
+          background: black;
+          font-size: 2.2rem;
+          cursor: pointer;
+          border-radius: 50%;
+          transform: translateY(-50%);
+        }
+
+        .slide-button:hover {
+          background: #444;
+        }
+
+        #prev-slide {
+          left: -50px;
+          display: none;
+        }
+
+        #next-slide {
+          right: -20px;
+        }
+
+        .container {
+          display: grid;
+          overflow-x: auto;
+          scrollbar-width: none;
+          grid-template-columns: repeat(4, 1fr);
+
+          .image-item {
+            width: 1250px;
+            height: 400px;
+
+            @include for-size(tablet) {
+              width: 835px;
+              height: 300px;
+            }
+
+            @include for-size(mobile) {
+              width: 690px;
+              height: 250px;
+            }
+          }
+
+          .container::-webkit-scrollbar {
+            display: none;
+          }
+        }
+
+        .slider-scrollbar {
+          margin-top: 20px;
+
+          .scrollbar-track {
+            height: 2px;
+            width: 100%;
+            background: #ccc;
+            position: relative;
+            border-radius: 4px;
+
+            .scrollbar-thumb {
+              position: absolute;
+              height: 100%;
+              width: 50%;
+              background: black;
+              border-radius: inherit;
+              cursor: grab;
+            }
+
+            .scrollbar-track:active {
+              cursor: grabbing;
+              height: 8px;
+              top: -2px;
+            }
+
+            .scrollbar-thumb::after {
+              content: "";
+              position: absolute;
+              left: 0;
+              right: 0;
+              top: -10px;
+              bottom: -10px;
+            }
+          }
+        }
+
+        .slider-scrollbar:hover {
+
+          .scrollbar-track {
+            height: 4px;
+          }
+        }
+    }
+
+    .supporter {
+      height: 250px;
+      background-color: rgba(128, 128, 128, 0.055);
+      font-family: "Work Sans";
+      font-size: 120%;
+
+      @include for-size(tablet) {
+        height: 350px;
+      }
+
+      .top {
+        display: flex;
+        justify-content: center;
+        padding-top: 50px;
+      }
+
+      .down {
+        display: flex;
+        justify-content: center;
+        gap: 80px;
+
+        @include for-size(tablet) {
+          display: grid;
+          grid-template-columns: repeat(3, 2fr);
+          gap: 50px;
+          padding-left: 150px;
+        }
+
+        @include for-size(mobile) {
+          padding-left: 100px;
+        }
+
+        >img {
+          width: 150px;
+          height: 150px;
+          object-fit: contain;
+
+          @include for-size(tablet) {
+            width: 100px;
+            height: 100px;
+          }
+        }
+      }
+    }
+
+    .main {
+      @include container;
+      padding-top: 60px;
+      padding-bottom: 60px;
+
+      >h1 {
+        font-weight: 600;
+        font-family: "Work Sans";
+      }
+
+      >p {
+        padding-top: 20px;
+        padding-bottom: 30px;
+        font-family: "Work Sans";
+        font-size: 120%;
+      }
+
+      .courses-name {
+        display: flex;
+        gap: 20px;
+        padding-bottom: 20px;
+        font-family: "Work Sans";
+        
+        >h3 {
+          font-weight: 600;
+        }
+      }
+
+      .courses-table {
+        position: relative;
+        height: 550px;
+        width: 1270px;
+        border: 1px solid rgba(0, 0, 0, 0.247);
+        padding: 30px;
+
+        @include for-size(tablet) {
+          width: 850px;
+          height: 600px;
+        }
+
+        @include for-size(mobile) {
+          width: 700px;
+        }
+
+        >h2 {
+          font-weight: 600;
+          padding-bottom: 15px;
+          font-family: "Work Sans";
+        }
+
+        >p {
+          font-family: "Work Sans";
+          line-height: 30px;
+          font-size: 110%;
+        }
+
+        >a {
+          text-decoration: none;
+
+          .button {
+            width: 160px;
+            height: 40px;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            cursor: pointer;
+          }
+
+          .button:hover {
+            background-color: rgba(0, 0, 0, 0.12);
+          }
+        }
+
+        .slide-button {
+          position: absolute;
+          top: 50%;
+          height: 50px;
+          width: 50px;
+          color: #fff;
+          border: none;
+          outline: none;
+          background: black;
+          font-size: 2.2rem;
+          cursor: pointer;
+          border-radius: 50%;
+          transform: translateY(20%);
+
+          @include for-size(tablet) {
+            width: 40px;
+            height: 40px;
+            top: 60%;
+          }
+        }
+
+        .slide-button:hover {
+          background: #444;
+        }
+
+        #prev-slide {
+          left: -20px;
+
+          @include for-size(tablet) {
+            left: 0;
+          }
+        }
+
+        #next-slide {
+          right: -20px;
+
+          @include for-size(tablet) {
+            right: 0;
+          }
+        }
+
+        .courses {
+          overflow-x: auto;
+          scrollbar-width: none;
+          display: grid;
+          grid-template-columns: repeat(10, 1fr);
+          gap: 10px;
+
+          .courses-card {
+
+            .top {
+              padding-top: 20px;
+        
+              >img {
+                width: 230px;
+                height: 150px;
+
+                @include for-size(tablet) {
+                  width: 255px;
+                }
+
+                @include for-size(mobile) {
+                  width: 205px;
+                }
+              }
+            }
+        
+            .bottom {
+              padding-top: 10px;
+
+              >a {
+                text-decoration: none;
+                color: black;
+              }
+
+              >p {
+                padding-top: 5px;
+              }
+        
+              .rating {
+                display: flex;
+                gap: 10px;
+                padding-top: 10px;
+        
+                .star {
+                  display: flex;
+                  gap: 0;
+                }
+              }
+        
+              .price {
+                display: flex;
+                gap: 10px;
+                padding-top: 10px;
+              }
+            }
+          }
+
+          @include for-size(tablet) {
+
+            #forth {
+              display: none;
+            }
+
+            #fifth {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    .comment {
+      width: 100%;
+      height: 480px;
+      background-color: rgba(128, 128, 128, 0.055);
+      
+      >h2 {
+        padding-top: 60px;
+        padding-left: 90px;
+        font-family: "Work Sans";
+      }
+
+      .card-container {
+        @include container;
+        display: flex;
+        gap: 30px;
+
+        .tree {
+
+          @include for-size(tablet) {
+            display: none;
+          }
+        }
+
+        .comment-card {
+          width: 400px;
+          height: 300px;
+          border: 1px solid rgba(0, 0, 0, 0.247);
+          margin-top: 20px;
+          padding-left: 20px;
+
+          @include for-size(mobile) {
+            width: 330px;
+          }
+  
+          >i {
+            padding-top: 20px;
+          }
+  
+          >p {
+            padding-top: 20px;
+          }
+  
+          .card-middle {
+            display: flex;
+            gap: 10px;
+  
+            .circle {
+              width: 40px;
+              height: 40px;
+              background-color: rgba(0, 0, 0, 0.825);
+              border-radius: 50%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+      
+              >h4 {
+                color: white;
+              }
+            }
+
+            >h4 {
+              padding-top: 10px;
+            }
+          }
+  
+          .solid {
+            width: 360px;
+            border: 1px solid rgba(0, 0, 0, 0.200);
+            margin-top: 20px;
+
+            @include for-size(mobile) {
+              width: 250px;
+            }
+          }
+  
+          .card-bottom {
+            display: flex;
+            gap: 10px;
+  
+            >.circle {
+              width: 30px;
+              height: 30px;
+              background-color: #5624d0;
+              border-radius: 50%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+  
+              >i {
+                color: white;
+                width: 10px;
+              }
+            }
+
+            >a {
+              text-decoration: none;
+              color: #5624d0;
+            }
+          }
+        }
+
+        .one {
+
+          .card-middle {
+            padding-top: 20px;
+          }
+        }
+
+        .twoo {
+
+          .card-middle {
+            padding-bottom: -20px;
+          }
+        }
+
+        .tree {
+
+          .card-middle {
+            padding-bottom: -20px;
+          }
+        }
+      }
+    }
+
+    .viewing {
+      @include container;
+      margin-top: 40px;
+
+      .card-container {
+        display: grid;
+        grid-template-columns: repeat(5, 2fr);
+
+        @include for-size(tablet) {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include for-size(mobile) {
+          gap: 10px;
+        }
+
+        .courses-card {
+
+          .top {
+            padding-top: 20px;
+      
+            >img {
+              width: 230px;
+              height: 150px;
+            }
+          }
+      
+          .bottom {
+            padding-top: 10px;
+
+            >a {
+              text-decoration: none;
+              color: black;
+            }
+      
+            >p {
+              padding-top: 5px;
+            }
+      
+            .rating {
+              display: flex;
+              gap: 10px;
+              padding-top: 10px;
+      
+              .star {
+                display: flex;
+                gap: 0;
+              }
+            }
+      
+            .price {
+              display: flex;
+              gap: 10px;
+              padding-top: 10px;
+            }
+          }
+        }
+
+        >#forth {
+
+          @include for-size(tablet) {
+            display: none;
+          }
+        }
+
+        >#fifth {
+
+          @include for-size(tablet) {
+            display: none;
+          }
+        }
+      }
+
+      .second {
+        margin-top: 40px;
+
+        >#forth {
+
+          @include for-size(tablet) {
+            display: none;
+          }
+        }
+
+        >#fifth {
+
+          @include for-size(tablet) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .category {
+      @include container;
+      margin-top: 80px;
+
+      >h2 {
+        font-family: "Work Sans";
+      }
+      
+      .category-container {
+        display: flex;
+        gap: 20px;
+
+        @include for-size(tablet) {
+          display: grid;
+          grid-template-columns: repeat(2, 2fr);
+        }
+
+        .ctgr {
+
+          .top-categories {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            height: 300px;
+            background-color: rgba(128, 128, 128, 0.055);
+            margin-top: 30px;
+
+            @include for-size(tablet) {
+              width: 400px;
+            }
+
+            @include for-size(mobile) {
+              width: 340px;
+            }
+    
+            >img {
+              width: 250px;
+              height: 250px;
+            }
+          }
+  
+          .category-name {
+            padding-top: 20px;
+            font-family: "Work Sans";
+            
+            >a {
+              color: black;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+
+    .topic {
+      width: 100%;
+      height: 500px;
+      background-color: rgba(128, 128, 128, 0.055);
+      margin-top: 80px;
+      padding-top: 60px;
+
+      >h2 {
+        padding-left: 90px;
+        font-family: "Work Sans";
+      }
+
+      .category-topic {
+        @include container;
+        display: flex;
+        gap: 200px;
+        padding-top: 30px;
+
+        @include for-size(tablet) {
+          gap: 70px;
+        }
+
+        @include for-size(mobile) {
+          gap: 40px;
+          font-size: 90%;
+        }
+
+        .category-topic-name {
+          display: table-row;
+          font-family: "Work Sans";
+
+          .first {
+            line-height: 30px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+
+            >h3 {
+              color: #5624d0;
+              text-decoration: underline;
+            }
+          }
+
+          .second {
+            line-height: 30px;
+            margin-bottom: 40px;
+
+            >h3 {
+              color: #5624d0;
+              text-decoration: underline;
+            }
+          }
+
+          .third {
+            line-height: 30px;
+
+            >h3 {
+              color: #5624d0;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+
+    .learn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "Work Sans";
+      font-size: 120%;
+
+      .left {
+
+        >img {
+          width: 400px;
+          height: 400px;
+
+          @include for-size(mobile) {
+            width: 300px;
+            height: 300px;
+          }
+        }
+      }
+
+      .right {
+        padding-top: 60px;
+        
+        >h2 {
+          padding-bottom: 10px;
+        }
+
+        >p {
+          line-height: 30px;
+        }
+      }
+    }
+}

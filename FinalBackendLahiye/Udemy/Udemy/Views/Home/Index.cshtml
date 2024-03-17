@@ -1,0 +1,132 @@
+﻿@model HomeViewModel
+@{
+    int order = 0;
+}
+<div class="slider">
+    <button id="prev-slide" class="slide-button material-symbols-rounded">chevron_left</button>
+    <div class="container">
+        @foreach (var sld in Model.Sliders)
+        {
+            <img src="~/uploads/SliderImages/@sld.ImageName" alt="" class="image-item">
+        }
+    </div>
+    <button id="next-slide" class="slide-button material-symbols-rounded">chevron_right</button>
+    <div class="slider-scrollbar">
+        <div class="scrollbar-track">
+            <div class="scrollbar-thumb">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="supporter">
+    <div class="top">
+        <p>Trusted by over 15,000 companies and millions of learners around the world</p>
+    </div>
+    <div class="down">
+        @foreach(var cp in Model.Companies)
+        {
+            <img src="~/uploads/CompanyImages/@cp.LogoImageName" alt="">
+        }
+    </div>
+</div>
+<div class="main">
+    <h1>A broad selection of courses</h1>
+    <p>Choose from over @Model.Courses.Count() online video courses with new additions published every month</p>
+    <div class="courses-name">
+            <h3>Most Popular</h3>    
+    </div>
+    <div class="courses-table">
+        <h2>Expand your career opportunities with Courses</h2>
+        <p>Take one of Udemy’s range of Python courses and learn how to code using this incredibly useful language. Its <br /> syntax and readability makes Python perfect for Flask, Django, data science, and machine learning. You’ll <br /> learn how to build everything from games to sites to apps.</p>
+        <button id="prev-slide" class="slide-button material-symbols-rounded">chevron_left</button>
+        <div class="courses">
+            @foreach (var crs in Model.Courses.Take(10))
+            {
+                @Html.Partial("_CourseCardPartialView",crs);
+            }
+        </div>
+        <button id="next-slide" class="slide-button material-symbols-rounded">chevron_right</button>
+    </div>
+</div>
+@if (Model.CourseReviews.Count>0)
+{
+    <div class="comment">
+        <h2>How learners like you are achieving their goals</h2>
+        <div class="card-container">
+            @foreach (var rvw in Model.CourseReviews)
+            {
+                order++;
+                <div class="comment-card @(order==3?"tree":"one")">
+                    <i class="fa-solid fa-comment"></i>
+                    <p>@rvw.ReviewText</p>
+                    <div class="card-middle">
+                        <div class="circle">
+                            <h4>@rvw.AppUser.UserName.Substring(0,2)</h4>
+                        </div>
+                        <h4>@rvw.AppUser.UserName</h4>
+                    </div>
+                    <div class="solid"></div>
+                    <div class="card-bottom">
+                        <div class="circle">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                        <a asp-controller="course" asp-action="detail" asp-route-id="@rvw.CourseId"><h4>@rvw.Course.Name;</h4></a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+}
+<div class="viewing">
+    <h2>Learners are viewing</h2>
+    <div class="card-container">
+        @foreach (var crs in Model.Courses.Skip(10).Take(5))
+        {
+          @Html.Partial("_CourseCardPartialView",crs)
+        }
+        
+    </div>
+    <div class="card-container second">
+        @foreach (var crs in Model.Courses.Skip(15).Take(5))
+        {
+            @Html.Partial("_CourseCardPartialView",crs)
+        }
+    </div>
+</div>
+<div class="category">
+    <h2>Top categories</h2>
+    <div class="category-container">
+        @foreach(var tpctg in Model.TopCategories)
+        {
+            <div class="ctgr">
+                <div class="top-categories">
+                    <img src="~/uploads/CategoryImages/@tpctg.ImageName" alt="">
+                </div>
+                <div class="category-name">
+                    <a asp-action="index" asp-controller="explore" asp-route-categoryId="@tpctg.Id"><h3>@tpctg.Name</h3></a>
+                </div>
+            </div>
+        }    
+    </div>
+</div>
+<div class="topic">
+    <h2>Featured topics by category</h2>
+    <div class="category-topic">
+        @foreach (var ctg in Model.Categories)
+        {
+            <div class="category-topic-name">
+                <h3>@ctg.Name</h3>
+                @foreach (var subctg in ctg.SubCategories)
+                {
+                    <div class="first">
+                        <a asp-action="index" asp-controller="explore" asp-route-subcategoryId="@subctg.Id"><h3>@subctg.Name</h3></a>
+                        <p>@subctg.Courses.Sum(x=>x.AppUserCourses.Count()) learners</p>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+</div>
+@section ScriptsHome{
+    <script src="~/js/script-home.js"></script>
+}

@@ -1,0 +1,20 @@
+﻿@model UserResetViewModel
+<form id="form" asp-action="reset" asp-controller="account" method="post">
+    <h2>Reset Password</h2>
+    <p>Enter your new password!</p>
+    <div style="margin-bottom:20px;" class="input-control">
+        <input type="password" placeholder="New Password" id="password" asp-for="Password" class="password">
+        <span style="color:red;" asp-validation-for="Password"></span>
+    </div>
+    <div style="margin-bottom:20px;" class="input-control">
+        <input type="password" placeholder="Confirm Password" id="confirm-password" asp-for="ConfirmPassword" class="confirm-password">
+        <span style="color:red;" asp-validation-for="ConfirmPassword"></span>
+    </div>
+    <div style="color:red;" asp-validation-summary="ModelOnly"></div>
+    <input hidden asp-for="Token" value="@ViewBag.Token" />
+    <input hidden asp-for="Email" value="@ViewBag.Email" />
+    <button type="submit" class="btn" id="btn">
+        <h3>Reset Password</h3>
+    </button>
+</form>
+

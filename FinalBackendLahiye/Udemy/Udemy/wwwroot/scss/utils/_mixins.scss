@@ -1,0 +1,24 @@
+@mixin for-size($screen) {
+    @if $screen == tablet {
+        @media  screen and (max-width: $desktop-container-width) {
+            @content;
+        }
+    }@else if $screen == mobile {
+        @media  screen and (max-width: $tablet-container-width) {
+            @content;
+        }
+    }
+}
+
+@mixin container() {
+    width: $desktop-container-width;
+    margin: auto;
+
+    @include for-size(tablet) {
+        width: $tablet-container-width;
+    }
+
+    @include for-size(mobile) {
+        width: $mobile-container-width;
+    }
+}

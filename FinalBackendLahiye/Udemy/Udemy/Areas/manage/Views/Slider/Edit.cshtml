@@ -1,0 +1,22 @@
+﻿@model Slider
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <h1>Edit Slider Data</h1>
+        <form asp-action="edit" enctype="multipart/form-data" method="post">
+            <div class="form-group">
+                <label asp-for="Image">New Image</label>
+                <input class="form-control" asp-for="Image">
+                <span class="text-danger" asp-validation-for="Image"></span>
+            </div>
+            @if (Model.ImageName != null)
+            {
+                <div>
+                    <p>Exist Slider Image</p>
+                    <img style="border:dotted;" width="300" src="~/uploads/SliderImages/@Model.ImageName" />
+                </div>
+            }
+            <button type="submit" class="btn btn-primary" style="margin-top:20px;">Submit</button>
+        </form>
+    </div>
+</div>
+

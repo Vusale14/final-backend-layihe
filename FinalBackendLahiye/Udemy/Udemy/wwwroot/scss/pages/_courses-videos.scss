@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    .video-field {
+        @include container;
+        width: 1200px;
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        padding-top: 50px;
+
+        @include for-size(tablet) {
+            gap: 100px;
+        }
+
+        @include for-size(mobile) {
+            gap: 50px;
+        }
+
+        .right-video-field {
+            width: 250px;
+            height: 490px;
+            margin-top: -2px;
+            overflow: auto;
+        }
+
+        .left-video-field {
+
+            @include for-size(tablet) {
+                width: 400px;
+            }
+
+            video {
+
+                @include for-size(tablet) {
+                    width: 450px;
+                }
+
+                @include for-size(mobile) {
+                    width: 420px;
+                }
+            }
+        }
+    }
+}

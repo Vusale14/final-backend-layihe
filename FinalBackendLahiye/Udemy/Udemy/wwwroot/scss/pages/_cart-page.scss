@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    .main-card-side {
+        width: 1200px;
+        display: flex;
+        justify-content: space-around;
+        gap: 50px;
+
+        @include for-size(tablet) {
+            width: 800px;
+            
+        }
+
+        @include for-size(mobile) {
+            width: 700px;
+            
+        }
+
+        .main-cart {
+            font-family: "Work Sans";
+    
+            >h1 {
+                padding-left: 120px;
+                font-size: 250%;
+                font-weight: 600;
+                color: rgba(0, 0, 0, 0.815);
+                padding-bottom: 40px;
+            }
+    
+            .solid {
+                width: 850px;
+                margin-left: 110px;
+                margin-top: 10px;
+    
+                @include for-size(tablet) {
+                    width: 700px;
+                }
+
+                @include for-size(mobile) {
+                    width: 550px;
+                }
+            }
+    
+            .main-cart-section {
+                display: flex;
+                gap: 200px;
+    
+                .course-field {
+                    display: flex;
+                    padding-left: 110px;
+        
+                    >img {
+                        width: 150px;
+                        height: 120px;
+
+                        @include for-size(mobile) {
+                            height: 130px;
+                        }
+                    }
+        
+                    .course-info-field {
+                        width: 400px;
+                        padding-left: 30px;
+    
+                        @include for-size(tablet) {
+                            width: 260px;
+                        }
+
+                        >h4 {
+                            line-height: 20px;
+
+                            @include for-size(mobile) {
+                                font-size: 90%;
+                            }
+                        }
+        
+                        >p {
+                            padding-top: 10px;
+                            padding-bottom: 10px;
+
+                            @include for-size(mobile) {
+                                font-size: 80%;
+                            }
+                        }
+        
+                        .rating {
+                            display: flex;
+                            gap: 10px;
+                        }
+        
+                        .mini-info {
+                            display: flex;
+                            padding-top: 10px;
+                            gap: 10px;
+    
+                            p {
+                                font-size: 90%;
+
+                                @include for-size(mobile) {
+                                    font-size: 80%;
+                                }
+                            }
+                        }
+                    }
+        
+                    >.price {
+                        padding-left: 100px;
+                        padding-top: 20px;
+
+                        @include for-size(mobile) {
+                            padding-left: 30px;
+                        }
+                    }
+        
+                    .fa-trash {
+                        padding-left: 80px;
+                        padding-top: 35px;
+
+                        @include for-size(mobile) {
+                            padding-left: 30px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .right-cart-field {
+            margin-top: 100px;
+            font-family: "Work Sans";
+    
+            >h2 {
+                color: rgb(96, 95, 95);
+                padding-bottom: 15px;
+            }
+    
+            >h1 {
+                color: rgba(0, 0, 0, 0.825);
+
+                @include for-size(tablet) {
+                    font-size: 110%;
+                }
+            }
+    
+            >del {
+                font-size: 120%;
+            }
+    
+            >p {
+                padding-top: 15px;
+                font-size: 120%;
+                color: red;
+
+                @include for-size(tablet) {
+                    font-size: 110%;
+                }
+            }
+    
+            button {
+                background-color: #a435f0;
+                width: 240px;
+                margin-top: 20px;
+                padding-bottom: 20px;
+                padding-top: 18px;
+                cursor: pointer;
+
+                @include for-size(tablet) {
+                    width: 120px;
+                }
+    
+                >h3 {
+                    color: white;
+                }
+            }
+    
+            button:hover {
+                background-color: #a535f0d2;
+            }
+        }
+    }
+
+    .viewing {
+        @include container;
+        position: relative;
+        padding-top: 80px;
+
+        .slide-button {
+            position: absolute;
+            z-index: 1;
+            top: 45%;
+            height: 50px;
+            width: 50px;
+            color: #fff;
+            border: none;
+            outline: none;
+            background: black;
+            font-size: 2.2rem;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .slide-button:hover {
+            background: #444;
+        }
+
+        #prev-slide {
+            left: -40px;
+
+            @include for-size(tablet) {
+                left: -20px;
+            }
+        }
+
+        #next-slide {
+            right: -20px;
+        }
+
+        .card-container {
+            display: grid;
+            overflow-x: auto;
+            scrollbar-width: none;
+            grid-template-columns: repeat(10, 1fr);
+        }
+    }
+}

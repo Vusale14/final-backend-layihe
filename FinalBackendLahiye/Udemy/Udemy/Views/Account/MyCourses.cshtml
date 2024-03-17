@@ -1,0 +1,33 @@
+﻿@model List<Course>
+
+    <div class="main-cart">
+        <h1>My Courses</h1>
+    @foreach (var crs in Model)
+    {
+        <div class="solid solided"></div>
+        <div class="main-cart-section" id="main-cart-section">
+            <div class="course-field">
+                <img id="img" src="~/uploads/CourseImages/@crs.PosterImageName" alt="">
+                <div class="course-info-field" id="my-courses-info">
+                    <a asp-controller="account" asp-action="coursevideo" asp-route-courseId="@crs.Id"><h4>@crs.Name</h4></a><a asp-action="detail" asp-controller="course" asp-route-id="@crs.Id" style="color:red;">Details</a>
+                    <p>@crs.Creator</p>
+                    <div class="rating">
+                        <h4>@crs.OverallRate</h4>
+                        <div class="star">
+                            @for (int i = 1; i <= 5; i++)
+                            {
+                                <i class="@(i<=crs.OverallRate?"fa fa-star":"fa-regular fa-star")"></i>
+                            }
+                        </div>
+                        <p>(@crs.CourseReviews.Count())</p>
+                    </div>
+                    <div class="mini-info">
+                        <p>@crs.TotalHours total hours</p>
+                        <p>@crs.LectureCount lectures</p>
+                        <p>@crs.ContentLevel</p>   
+                    </div>
+                </div>
+            </div>
+        </div>
+    }    
+    </div>

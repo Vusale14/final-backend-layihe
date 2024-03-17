@@ -1,0 +1,164 @@
+﻿@using System.Security.Claims;
+@model Course
+@{
+    CourseReviewViewModel viewModel = new CourseReviewViewModel
+    {
+        CourseId=Model.Id
+    };
+}
+    <div class="black">
+        <div class="left">
+            <h1>@Model.Name</h1>
+            <h3>@Model.Description</h3>
+            <div class="rating">
+                <h4>@Model.OverallRate</h4>
+                <div class="star">
+                    @for (int i = 1; i <=5; i++)
+                    {
+                    <i class="@(i<=Model.OverallRate?"fa fa-star":"fa-regular fa-star")"></i>
+                    }
+                </div>
+                <p>(@Model.CourseReviews.Count())</p>
+                <p>@Model.AppUserCourses.Count() students</p>
+            </div>
+            <h3>Created by @Model.Creator</h3>
+        </div>
+    </div>
+    <div class="main-field">
+        <div class="left-side">
+            <h1>What you'll learn</h1>
+            <div class="option">
+                <div class="left">
+                    <p>You will learn how to leverage the power of Python to solve tasks.</p>
+                    <p>You will be able to use Python for your own work problems or personal projects.</p>
+                    <p>Learn to use Python professionally, learning both Python 2 and Python 3!</p>
+                    <p>Learn advanced Python features, like the collections module and how to work with timestamps!</p>
+                    <p>Understand complex topics, like decorators.</p>
+                    <p>Get an understanding of how to create GUIs in the Jupyter Notebook system!</p>
+                </div>
+                <div class="right">
+                    <p>You will build games and programs that use Python libraries.</p>
+                    <p>You will create a portfolio of Python based projects you can share.</p>
+                    <p>Create games with Python, like Tic Tac Toe and Blackjack!</p>
+                    <p>Learn to use Object Oriented Programming with classes!</p>
+                    <p>Understand how to use both the Jupyter Notebook and create .py files</p>
+                    <p>Build a complete understanding of Python from the ground up!</p>
+                </div>
+            </div>
+        </div>
+        <div class="right-side">
+            <video width="300" height="220" controls>
+                <source src="~/assets/video/about-python.mp4" type="video/mp4">
+            </video>
+            @if (Model.DiscountPercent==0)
+            {
+            <h1>$@Model.Price.ToString("0.00")</h1>
+            }
+            else
+            {
+            <h1>$@((Model.Price*(100-Model.DiscountPercent)/100).ToString("0.00"))</h1>
+            }
+            <a asp-action="addtocart" asp-controller="course" asp-route-id="@Model.Id" class="btn" id="btn">
+                <button>
+                <h3>Add to cart</h3>
+                </button>
+            </a>
+            <p>30-Day Money-Back Guarantee</p>
+            <h3>This course includes:</h3>
+            <p class="p">@Model.TotalHours hours on-demand video</p>
+            <p class="p">8 coding exercises</p>
+            <p class="p">@Model.LectureCount articles</p>
+            <p class="p">17 downloadable resources</p>
+            <p class="p">Access on mobile and TV</p>
+            <p class="p">Full lifetime access</p>
+            <p class="p">Certificate of completion</p>
+        </div>
+    </div>
+    <div class="table">
+        <div class="requirements">
+            <ul>
+                <h2>Requirements</h2>
+                <li>No coding experience is necessary to take this course! I take you from beginner to expert!</li>
+                <li>Any computer and OS will work — Windows, macOS or Linux. We will set up your text editor the course.</li>
+                <li>A basic understanding of HTML and CSS is a plus, but not a must! The course includes an HTML and CSS crash course.</li>
+            </ul>
+        </div>
+        <div class="description">
+            <h2>Description</h2>
+            <h3>The #1 bestselling JavaScript course on Udemy!</h3>
+            <p>"Really, really well made course. Super in-depth, with great challenges and projects that will solidify your Javascript understanding. I found the lectures were paced perfectly -- Jonas doesn't skip over anything that might be useful to a JS developer" — Carson Bartholomew</p>
+            <p id="p1">JavaScript is the most popular programming language in the world. It powers the entire modern web. It provides millions of high-paying jobs all over the world.</p>
+            <p>That's why you want to learn JavaScript too. And you came to the right place!</p>
+            <h3 id="h3-1">Why is this the right JavaScript course for you?</h3>
+            <p>This is the most complete and in-depth JavaScript course on Udemy (and maybe the entire internet!). It's an all-in-one package that will take you from the very fundamentals of JavaScript, all the way to building modern and complex applications.</p>
+            <p>You will learn modern JavaScript from the very beginning, step-by-step. I will guide you through practical and fun code examples, important theory about how JavaScript works behind the scenes, and beautiful and complete projects.</p>
+            <p>You will become ready to continue learning advanced front-end frameworks like React, Vue, Angular, or Svelte.</p>
+            <p>You will also learn how to think like a developer, how to plan application features, how to architect your code, how to debug code, and a lot of other real-world skills that you will need in your developer job.</p>
+            <p>And unlike other courses, this one actually contains beginner, intermediate, advanced, and even expert topics, so you don't have to buy any other course in order to master JavaScript from the ground up!</p>
+            <p>But... You don't have to go into all these topics. This is a huge course, because, after all, it's "The Complete JavaScript Course". In fact, it's like many courses in one! But you can become an excellent developer by watching only parts of the course. That's why I built this course in a very modular way, and designed pathways that will take you through the course faster.</p>
+            <p>By the end of the course, you will have the knowledge and confidence that you need in order to ace your job interviews and become a professional developer.</p>
+            <h3 id="h3-2">Why am I the right JavaScript teacher for you?</h3>
+            <p>My name is Jonas, I'm an experienced web developer and designer, and one of Udemy's top instructors. I have been teaching this bestselling course since 2016 to over 850,000 developers, always listening to feedback and understanding exactly how students actually learn.</p>
+            <p>I know how students learn JavaScript and what they need in order to master it. And with that knowledge, I designed the ideal course curriculum. It's a unique blend of real-world projects, deep explanations, theory lectures, and challenges, that will take you from zero to an expert and confident JavaScript developer in just a couple of weeks.</p>
+        </div>
+        <div class="covered">
+            <ul>
+                <h3>So what exactly is covered in the course?</h3>
+                <li>Build 5 beautiful real-world projects for your portfolio! In these projects, you will learn how to plan and architect your applications using flowcharts and common JavaScript patterns</li>
+                <li>Master the JavaScript fundamentals: variables, if/else, operators, boolean logic, functions, arrays, objects, loops, strings, and more</li>
+                <li>Learn modern JavaScript (ES6+) from the beginning: arrow functions, destructuring, spread operator, default arguments, optional chaining, and more</li>
+                <li>How JavaScript works behind the scenes: engines, the call stack, hoisting, scoping, the 'this' keyword, reference values, and more.</li>
+                <li>Deep dive into functions: arrow functions, first-class and higher-order functions, bind, and closures.</li>
+                <li>Deep dive into object-oriented programming: prototypal inheritance, constructor functions (ES5), classes (ES6), encapsulation, abstraction, inheritance, and polymorphism. [This is like a small standalone course]</li>
+                <li>Deep dive into asynchronous JavaScript: the event loop, promises, async/await, and error handling. You will use these to access data from third-party APIs with AJAX calls. [This is like a small standalone course]</li>
+                <li>Learn modern tools that are used by professional web developers: NPM, Parcel, Babel, and ES6 modules</li>
+            </ul>
+        </div>
+        <div class="package">
+            <ul>
+                <h3>This is what's also included in the package:</h3>
+                <li>Up-to-date HD-quality videos, that are easy to search and reference (great for Udemy Business learners)</li>
+                <li>Professional English captions (not the auto-generated ones)</li>
+                <li>Downloadable starter code and final code for each section</li>
+                <li>Downloadable slides for 40+ theory videos</li>
+                <li>25+ coding challenges and 25+ assignments to practice your new skills</li>
+            </ul>
+        </div>
+        <div class="who">
+            <ul>
+                <h2>Who this course is for:</h2>
+                <li>Take this course if you want to gain a true and deep understanding of JavaScript</li>
+                <li>Take this course if you have been trying to learn JavaScript but: 1) still don't really understand JavaScript, or 2) still don't feel confident to code real apps</li>
+                <li>Take this course if you're interested in using a library/framework like React, Angular, Vue or Node in the future</li>
+                <li>Take this course if you already know JavaScript and are looking for an advanced course. This course includes expert topics!</li>
+                <li>Take this course if you want to get started with programming: JavaScript is a great first language!</li>
+            </ul>
+        </div>
+    </div>
+    <div class="user-comment">
+    @if (User.Identity.IsAuthenticated && !Model.CourseReviews.Any(x => x.AppUserId == User.FindFirstValue(ClaimTypes.NameIdentifier)))
+    {
+        @Html.Partial("_CourseReviewPartialView",viewModel)
+    }
+    @if (Model.CourseReviews.Any())
+    {
+        <div class="comment-text">
+            @foreach (var rvw in Model.CourseReviews)
+            {
+                <div class="user-comment-text">
+                    <h3>@(rvw.AppUser.UserName).</h3>
+                    <div class="rating">
+                        <div class="star">
+                            @for (int i = 1; i <= 5; i++)
+                            {
+                                <i class="@(i<=Model.OverallRate?"fa fa-star":"fa-regular fa-star")"></i>
+                            }
+                        </div>
+                    </div>
+                    <p>@rvw.ReviewText</p>
+                </div>
+            }
+        </div>
+    }
+    
+    </div>

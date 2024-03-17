@@ -1,0 +1,21 @@
+﻿@model Company
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <h1>Create Slider Data</h1>
+        <form asp-action="edit" enctype="multipart/form-data" method="post">
+            <div class="form-group">
+                <label asp-for="LogoImage">New Logo Image</label>
+                <input class="form-control" asp-for="LogoImage">
+                <span class="text-danger" asp-validation-for="LogoImage"></span>
+            </div>
+            @if (Model.LogoImageName != null)
+            {
+                <div>
+                    <p>Exist Slider Image</p>
+                    <img style="border:dotted;" width="300" src="~/uploads/CompanyImages/@Model.LogoImageName" />
+                </div>
+            }
+            <button type="submit" class="btn btn-primary" style="margin-top:20px;">Submit</button>
+        </form>
+    </div>
+</div>

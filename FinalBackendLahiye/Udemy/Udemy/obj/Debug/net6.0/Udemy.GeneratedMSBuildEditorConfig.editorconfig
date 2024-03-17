@@ -1,0 +1,217 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Udemy
+build_property.RootNamespace = Udemy
+build_property.ProjectDir = C:\Users\Vusala\Desktop\back final\FinalBackendLahiye\Udemy\Udemy\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Vusala\Desktop\back final\FinalBackendLahiye\Udemy\Udemy
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Areas/manage/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXEFjY291bnRcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Areas/manage/Views/Banner/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXEJhbm5lclxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Areas/manage/Views/Banner/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXEJhbm5lclxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Areas/manage/Views/Banner/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXEJhbm5lclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Areas/manage/Views/Category/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXENhdGVnb3J5XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Areas/manage/Views/Category/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXENhdGVnb3J5XEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Areas/manage/Views/Category/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXENhdGVnb3J5XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Areas/manage/Views/Company/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXENvbXBhbnlcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Areas/manage/Views/Company/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXENvbXBhbnlcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Areas/manage/Views/Company/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXENvbXBhbnlcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Areas/manage/Views/Course/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXENvdXJzZVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Areas/manage/Views/Course/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXENvdXJzZVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Areas/manage/Views/Course/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXENvdXJzZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Areas/manage/Views/Dashboard/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXERhc2hib2FyZFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Areas/manage/Views/InstructorReview/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXEluc3RydWN0b3JSZXZpZXdcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Areas/manage/Views/InstructorReview/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXEluc3RydWN0b3JSZXZpZXdcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Areas/manage/Views/InstructorReview/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXEluc3RydWN0b3JSZXZpZXdcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Areas/manage/Views/Setting/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXFNldHRpbmdcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Areas/manage/Views/Setting/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXFNldHRpbmdcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Areas/manage/Views/Setting/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXFNldHRpbmdcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Areas/manage/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXFNoYXJlZFxfTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Areas/manage/Views/Slider/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXFNsaWRlclxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Areas/manage/Views/Slider/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXFNsaWRlclxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Areas/manage/Views/Slider/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXFNsaWRlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Areas/manage/Views/SubCategory/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXFN1YkNhdGVnb3J5XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Areas/manage/Views/SubCategory/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXFN1YkNhdGVnb3J5XEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Areas/manage/Views/SubCategory/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXFN1YkNhdGVnb3J5XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Areas/manage/Views/User/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXFVzZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Areas/manage/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Areas/manage/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Views/Account/CourseVideo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDb3Vyc2VWaWRlby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Views/Account/Forgot.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxGb3Jnb3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Views/Account/MyCourses.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxNeUNvdXJzZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Views/Account/Reset.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZXNldC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Views/Course/Cart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlXENhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Views/Course/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlXERldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Views/Explore/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwbG9yZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Views/Home/AboutUs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dFVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Views/Shared/_CheckoutConfirmedEmailPartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DaGVja291dENvbmZpcm1lZEVtYWlsUGFydGlhbFZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Views/Shared/_CourseCardPartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Db3Vyc2VDYXJkUGFydGlhbFZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Views/Shared/_CourseReviewPartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Db3Vyc2VSZXZpZXdQYXJ0aWFsVmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Views/Shared/_ResetPartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9SZXNldFBhcnRpYWxWaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vusala/Desktop/back final/FinalBackendLahiye/Udemy/Udemy/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-iru1r7cjxz
